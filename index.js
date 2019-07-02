@@ -1,13 +1,13 @@
 console.log('Before');
-const user = getUser(1);
-console.log(user);
-console.log('After')
+getUser(1, (user) => {
+  console.log('User', user)
+});
+console.log('After');
 
-function getUser(id) {
-   setTimeout( () => {
-     console.log('reading a user');
-     return{ id: id , githubUserName : 'AdityaKumarJha'}, 2000 );
-   return 1;
+
+function getUser(id, callback){
+  setTimeout(() => {
+    console.log('Reading a user from a database . .. .');
+    callback({ id: id, githubUsername: 'adityakumarjha'});
+  }, 2000);
 }
-
-//three ways to deal with async javascript callbacks, promices ,await/async
