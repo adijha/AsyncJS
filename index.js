@@ -15,3 +15,4 @@ function getUser(id, callback){
 function getRepositories(username) {
   return ['repo1', 'repo2', 'repo3']
 }
+// rewrite it using promices
